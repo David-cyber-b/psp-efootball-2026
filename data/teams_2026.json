@@ -1,0 +1,130 @@
+{
+  "season": "2025/26",
+  "updated": "2026-05-18",
+  "clubs": [
+    {
+      "id": "ARS",
+      "name": "Arsenal",
+      "league": "Premier League",
+      "coach": "Mikel Arteta",
+      "coach_age": 44,
+      "coach_nationality": "Spain",
+      "stadium": "Emirates Stadium",
+      "stadium_capacity": 60704,
+      "stadium_city": "London",
+      "stadium_model": "res://stadiums/emirates.glb",
+      "kit_home": "Red/White",
+      "players": [
+        {"name": "Bukayo Saka", "age": 24, "pos": "RW", "overall": 88, "number": 7},
+        {"name": "William Saliba", "age": 25, "pos": "CB", "overall": 87, "number": 2},
+        {"name": "Declan Rice", "age": 27, "pos": "DMF", "overall": 87, "number": 41},
+        {"name": "Martin Odegaard", "age": 27, "pos": "AMF", "overall": 86, "number": 8}
+      ]
+    },
+    {
+      "id": "MCI",
+      "name": "Manchester City",
+      "league": "Premier League",
+      "coach": "Enzo Maresca",
+      "coach_age": 46,
+      "coach_nationality": "Italy",
+      "stadium": "Etihad Stadium",
+      "stadium_capacity": 53400,
+      "stadium_city": "Manchester",
+      "stadium_model": "res://stadiums/etihad.glb",
+      "kit_home": "Sky Blue",
+      "players": [
+        {"name": "Erling Haaland", "age": 25, "pos": "CF", "overall": 91, "number": 9},
+        {"name": "Phil Foden", "age": 26, "pos": "AMF", "overall": 88, "number": 47},
+        {"name": "Rodri", "age": 29, "pos": "DMF", "overall": 89, "number": 16}
+      ]
+    },
+    {
+      "id": "CHE",
+      "name": "Chelsea",
+      "league": "Premier League",
+      "coach": "Xabi Alonso",
+      "coach_age": 44,
+      "coach_nationality": "Spain",
+      "stadium": "Stamford Bridge",
+      "stadium_capacity": 40343,
+      "stadium_city": "London",
+      "stadium_model": "res://stadiums/stamford.glb",
+      "players": [
+        {"name": "Cole Palmer", "age": 24, "pos": "AMF", "overall": 86, "number": 20},
+        {"name": "Moises Caicedo", "age": 24, "pos": "DMF", "overall": 84, "number": 25}
+      ]
+    },
+    {
+      "id": "RMA",
+      "name": "Real Madrid",
+      "league": "La Liga",
+      "coach": "Carlo Ancelotti",
+      "coach_age": 66,
+      "coach_nationality": "Italy",
+      "stadium": "Santiago Bernabeu",
+      "stadium_capacity": 85000,
+      "stadium_city": "Madrid",
+      "stadium_model": "res://stadiums/bernabeu.glb",
+      "players": [
+        {"name": "Vinicius Jr", "age": 25, "pos": "LWF", "overall": 90, "number": 7},
+        {"name": "Jude Bellingham", "age": 22, "pos": "AMF", "overall": 89, "number": 5},
+        {"name": "Kylian Mbappe", "age": 27, "pos": "CF", "overall": 91, "number": 9}
+      ]
+    },
+    {
+      "id": "FCB",
+      "name": "FC Barcelona",
+      "league": "La Liga",
+      "coach": "Hansi Flick",
+      "coach_age": 61,
+      "coach_nationality": "Germany",
+      "stadium": "Camp Nou",
+      "stadium_capacity": 99354,
+      "stadium_city": "Barcelona",
+      "stadium_model": "res://stadiums/campnou.glb",
+      "players": [
+        {"name": "Lamine Yamal", "age": 18, "pos": "RW", "overall": 87, "number": 10},
+        {"name": "Pedri", "age": 23, "pos": "CMF", "overall": 86, "number": 8}
+      ]
+    },
+    {
+      "id": "RIV",
+      "name": "Rivers United",
+      "league": "NPFL",
+      "coach": "Finidi George",
+      "coach_age": 54,
+      "coach_nationality": "Nigeria",
+      "stadium": "Adokiye Amiesimaka Stadium",
+      "stadium_capacity": 38000,
+      "stadium_city": "Port Harcourt",
+      "stadium_model": "res://stadiums/adokiye.glb",
+      "kit_home": "Blue",
+      "players": [
+        {"name": "Nyima Nwagua", "age": 33, "pos": "CF", "overall": 72, "number": 9},
+        {"name": "Akor Jerome Adams", "age": 25, "pos": "CF", "overall": 70, "number": 11}
+      ]
+    },
+    {
+      "id": "REM",
+      "name": "Remo Stars",
+      "league": "NPFL",
+      "coach": "Daniel Ogumodede",
+      "coach_age": 38,
+      "coach_nationality": "Nigeria",
+      "stadium": "Remo Stars Stadium",
+      "stadium_capacity": 20000,
+      "stadium_city": "Ijebu-Ode",
+      "stadium_model": "res://stadiums/remo.glb"
+    }
+  ],
+  "stadiums_list": [
+    "Emirates Stadium - England",
+    "Etihad Stadium - England",
+    "Stamford Bridge - England",
+    "Santiago Bernabeu - Spain",
+    "Camp Nou - Spain",
+    "Adokiye Amiesimaka Stadium - Port Harcourt, NG",
+    "Remo Stars Stadium - Nigeria"
+  ]
+}
