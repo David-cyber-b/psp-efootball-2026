@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://bq6w1e2x3y4z5"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_abc"]
+[ext_resource type="Script" path="res://ball.gd" id="2_def"]
+
+[sub_resource type="Environment" id="Environment_1"]
+background_mode=1
+background_color=Color(0.4, 0.7, 1.0, 1)
+ambient_light_color=Color(1, 1, 1, 1)
+ambient_light_energy=0.5
+tonemap_mode=2
+
+[sub_resource type="BoxMesh" id="BoxMesh_pitch"]
+size=Vector3(110, 0.2, 70)
+
+[sub_resource type="StandardMaterial3D" id="Mat_pitch"]
+albedo_color=Color(0.15, 0.6, 0.15, 1)
+
+[sub_resource type="SphereMesh" id="Sphere_ball"]
+radius=0.22
+height=0.44
+
+[sub_resource type="CapsuleMesh" id="Capsule_player"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_home"]
+albedo_color=Color(0.9, 0.1, 0.1, 1)
+
+[sub_resource type="StandardMaterial3D" id="Mat_away"]
+albedo_color=Color(0.1, 0.1, 0.9, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment=SubResource("Environment_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform=Transform3D(0.8, -0.5, 0.3, 0, 0.6, -0.8, -0.6, -0.6, -0.5, 0, 10, 0)
+light_energy=1.2
+shadow_enabled=true
+
+[node name="Pitch" type="MeshInstance3D" parent="."]
+mesh=SubResource("BoxMesh_pitch")
+material_override=SubResource("Mat_pitch")
+
+[node name="PitchLines" type="Node3D" parent="Pitch"]
+
+[node name="Ball" type="RigidBody3D" parent="." groups=["ball"]]
+transform=Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mass=0.45
+physics_material_override=SubResource("Environment_1")
+script=ExtResource("2_def")
+
+[node name="BallMesh" type="MeshInstance3D" parent="Ball"]
+mesh=SubResource("Sphere_ball")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
+shape=SubResource("Sphere_ball")
+
+[node name="HomeTeam" type="Node3D" parent="."]
+
+[node name="Player_Home_1" type="CharacterBody3D" parent="HomeTeam" groups=["home_team"]]
+transform=Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1, 0)
+script=ExtResource("1_abc")
+
+[node name="Mesh" type="MeshInstance3D" parent="HomeTeam/Player_Home_1"]
+mesh=SubResource("Capsule_player")
+material_override=SubResource("Mat_home")
+
+[node name="Collision" type="CollisionShape3D" parent="HomeTeam/Player_Home_1"]
+shape=SubResource("Capsule_player")
+
+[node name="Player_Home_2" type="CharacterBody3D" parent="HomeTeam" groups=["home_team"]]
+transform=Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, -20)
+script=ExtResource("1_abc")
+
+[node name="Mesh" type="MeshInstance3D" parent="HomeTeam/Player_Home_2"]
+mesh=SubResource("Capsule_player")
+material_override=SubResource("Mat_home")
+
+[node name="Collision" type="CollisionShape3D" parent="HomeTeam/Player_Home_2"]
+shape=SubResource("Capsule_player")
+
+[node name="AwayTeam" type="Node3D" parent="."]
+
+[node name="Player_Away_1" type="CharacterBody3D" parent="AwayTeam" groups=["away_team"]]
+transform=Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 1, 0)
+script=ExtResource("1_abc")
+
+[node name="Mesh" type="MeshInstance3D" parent="AwayTeam/Player_Away_1"]
+mesh=SubResource("Capsule_player")
+material_override=SubResource("Mat_away")
+
+[node name="Collision" type="CollisionShape3D" parent="AwayTeam/Player_Away_1"]
+shape=SubResource("Capsule_player")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform=Transform3D(1, 0, 0, 0, 0.6, 0.8, 0, -0.8, 0.6, 0, 25, 35)
+fov=45.0
